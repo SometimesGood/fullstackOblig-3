@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "6ce861ed-c48d-4e40-953b-c0961257857d",
+		"name": "oblig3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/signup?email=student@ntnu.no&password=password&name=learner&surname=child&status=busy&place=on-campus&role=student&secretQuestion=secretAnswer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "student@ntnu.no"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						},
+						{
+							"key": "name",
+							"value": "learner"
+						},
+						{
+							"key": "surname",
+							"value": "child"
+						},
+						{
+							"key": "status",
+							"value": "busy"
+						},
+						{
+							"key": "place",
+							"value": "on-campus"
+						},
+						{
+							"key": "role",
+							"value": "student"
+						},
+						{
+							"key": "secretQuestion",
+							"value": "secretAnswer"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/login?email=teacher@ntnu.no&password=password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "teacher@ntnu.no"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticated user profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/profile?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgotPassword",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/forgotPassword?email=teacher@ntnu.no&secretQuestion=secretAnswer&newPassword=newPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forgotPassword"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "teacher@ntnu.no"
+						},
+						{
+							"key": "secretQuestion",
+							"value": "secretAnswer"
+						},
+						{
+							"key": "newPassword",
+							"value": "newPassword"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticated read others",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/profiles/?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg&name=gerardo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profiles",
+						""
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg"
+						},
+						{
+							"key": "name",
+							"value": "gerardo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticated delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/profiles/delete?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNTc5ODdiNzlmNTRiNWNmMDJjYzZiYSIsImVtYWlsIjoiZ3Jvb3RAbnRudS5ubyIsInJvbGUiOiJ0ZWFjaGVyIn0sImlhdCI6MTYxNjM3NDQ4NH0.nBIjf3RABGRKvtPqbggx_-uiAtVCKNmunnPx4ys1TGA&email=thanos@ntnu.no",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profiles",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNTc5ODdiNzlmNTRiNWNmMDJjYzZiYSIsImVtYWlsIjoiZ3Jvb3RAbnRudS5ubyIsInJvbGUiOiJ0ZWFjaGVyIn0sImlhdCI6MTYxNjM3NDQ4NH0.nBIjf3RABGRKvtPqbggx_-uiAtVCKNmunnPx4ys1TGA"
+						},
+						{
+							"key": "email",
+							"value": "thanos@ntnu.no"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticated update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"surname\":\"sword\" , \"role\":\"student\", \"place\":\"on-campus\", \"status\":\"busy\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/profiles/update?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg&email=yoda@ntnu.no",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"profiles",
+						"update"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWEyY2RmMDQ1NTFjMGMyYzQ0OWQ0MCIsImVtYWlsIjoidGVhY2hlckBudG51Lm5vIiwicm9sZSI6InRlYWNoZXIifSwiaWF0IjoxNjE2NTIyNTg2fQ.TvQG7RxSIfihBxn-u6ss5ozTOeS7WHGP62QcAcKF7Jg"
+						},
+						{
+							"key": "email",
+							"value": "yoda@ntnu.no"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

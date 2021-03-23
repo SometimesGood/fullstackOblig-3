@@ -1,0 +1,44 @@
+[
+  {
+    "email": "teacher@ntnu.no",
+    "password": "password",
+    "name": "gerardo",
+    "surname": "sensei",
+    "role": "teacher",
+    "place": "on-campus",
+    "status": "busy",
+    "secretQuestion": "secretAnswer"
+  },
+
+  {
+    "email": "student@ntnu.no",
+    "password": "password",
+    "name": "young",
+    "surname": "learner",
+    "role": "student",
+    "place": "home-office",
+    "status": "available",
+    "secretQuestion": "secretAnswer"
+  },
+  {
+    "email": "thanos@ntnu.no",
+    "password": "infinityStones",
+    "name": "thanos",
+    "surname": "lord",
+    "role": "student",
+    "place": "home-office",
+    "status": "available",
+    "secretQuestion": "balance"
+  },
+
+  {
+    "email": "yoda@ntnu.no",
+    "password": "ForceBeWithYou",
+    "name": "yoda",
+    "surname": "adoy",
+    "role": "teacher",
+    "place": "on-campus",
+    "status": "busy",
+    "secretQuestion": "Grogu"
+  }
+]
