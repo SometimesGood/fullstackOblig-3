@@ -22,6 +22,7 @@ router.get(
     // if query parameter is present, find by name
     if (nameToFind) {
       UserModel.find({ name: nameToFind })
+        .select("email name surname role place status")
         .then((user) => {
           // if no user is found show error msg
           if (user.length == 0) {
@@ -46,6 +47,8 @@ router.get(
     // if no query parameter then find all users in db
     else {
       UserModel.find({})
+        .select("email name surname role place status")
+
         .then((users) => {
           res.status(200).json(users);
         })
