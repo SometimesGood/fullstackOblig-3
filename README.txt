@@ -26,8 +26,6 @@ POSTMAN SETUP
    if token is not valid then you will not get authorized. else if the name looking for does not exist then it will show a empty array.
    If the name query parameter is omitted altogheter, it will show all users in the db.
    Response is msg saying here are the users, all users matching the query and the token used.
-   In this example both the password and secretquestion is visible, but for academic and easier handling purposes i left those be visible
-   to all users who look up other users.
 
 7. Authenticated delete others request needs a token and a email. token to get authorized and email is the user you want to find and delete.
    if token is not valid then you will not get authorized. else if the email looking for does not exist then it will show a empty array.

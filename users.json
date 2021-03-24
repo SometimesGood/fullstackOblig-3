@@ -1,6 +1,6 @@
 [
   {
-    "email": "teacher@ntnu.no",
+    "email": "teacher1@ntnu.no",
     "password": "password",
     "name": "gerardo",
     "surname": "sensei",
@@ -11,7 +11,7 @@
   },
 
   {
-    "email": "student@ntnu.no",
+    "email": "student1@ntnu.no",
     "password": "password",
     "name": "young",
     "surname": "learner",

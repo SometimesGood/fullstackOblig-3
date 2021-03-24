@@ -83,9 +83,11 @@ router.patch("/forgotPassword", async (req, res) => {
     { email: emailToFind },
     { password: newPassword }
   )
+    .select("email name surname role place status")
+
     .then((user) => {
       res.status(200).json({
-        message: `Here is the user linked to that email. User ${user.name} with email : ${emailToFind} now has updated password to ${newPassword}`,
+        message: `Here is the user linked to that email. User ${user.name} with email : ${emailToFind} now has updated the password to ${newPassword}`,
         user: user,
       });
     })

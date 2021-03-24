@@ -74,6 +74,7 @@ router.delete(
     // else find the user with that email and delete it
     else {
       UserModel.findOneAndDelete({ email: emailToFind })
+        .select("email name surname role place status")
         .then((user) => {
           res.status(200).json({
             message: `user ${user.name} with email : ${emailToFind} is now deleted`,
@@ -110,6 +111,7 @@ router.patch(
     // else find the user with that email and delete it
     else {
       UserModel.findOneAndUpdate({ email: emailToFind }, bodyparams)
+        .select("email name surname role place status")
         .then((user) => {
           // if user found show user that got updated and confirmation msg
           res.status(200).json({
